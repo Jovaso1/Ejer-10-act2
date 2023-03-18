@@ -1,0 +1,28 @@
+package ejer.pkg10.act2;
+import java.util.Scanner;
+public class Ejer10Act2 {
+    public static void main(String[] args) {
+        double num_insc, patrimonio, estrato, pag_matri, o;
+        String nombre;
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("Numero de inscripcion:");
+        num_insc = Integer.parseInt(teclado.nextLine());
+        System.out.print("Nombres: ");
+        nombre = teclado.nextLine();
+        System.out.println("Patrimonio: ");
+        patrimonio = teclado.nextDouble();
+        System.out.println("Estrato social: ");
+        estrato = teclado.nextDouble();
+        
+        if (patrimonio > 2000000 && estrato > 3){
+            pag_matri = (patrimonio*0.03) + 50000;
+        }else{
+            pag_matri = 50000;
+        }
+        System.out.println("Numero de inscripcion: " + num_insc);
+        System.out.println("El nombre es " + nombre);
+        System.out.println("El pago de matricula es " + pag_matri);
+    }
+        
+}
